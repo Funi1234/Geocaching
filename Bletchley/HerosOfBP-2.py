@@ -39,43 +39,5 @@ if __name__ == "__main__":
     keys = []
 
     L = LFSR(fpoly=fpoly, initstate=state, verbose=False)
-    with open('filename.txt', 'w') as file:
-        for i in range(10000):
-            tempseq = L.runKCycle(len(msg_1))
-            key = "".join([str(x) for x in tempseq])
-            if i % 100 == 0:
-                print()
-            print(".", end="")
-            file.write(key)
-            keys.append(key)
-    
-    # print()
-    # print("Starting")
-    # for i in range(len(keys) - 1):
-    #     if Utils.xor_binary(keys[i], keys[i+1]) == bitwise_sum_of_the_adjacent_sections_of_key:
-    #         print(keys[i], keys[i+1])
-    #     if Utils.xor_binary(keys[i], keys[i+1]) == bitwise_sum_of_the_adjacent_sections_of_key[::-1]:
-    #         print("reversed")
-    #         print(keys[i], keys[i+1])
 
-
-
-    # init_state = bitwise_sum_of_the_adjacent_sections_of_key[:61][::-1]
-
-    # key1 = Utils.lfsr_backwards(fpoly, len(msg_1)+len(msg_2),'', init_state)
-    # key2 = Utils.lfsr_backwards(fpoly, len(msg_2),'', init_state)
-
-    # key = Utils.xor_binary(key1, key2)
-
-    # y = Utils.xor_binary(key, msg_2)
-
-    # print(Utils.decode_baudot(y))
-    # print()
-
-
-
-
-# # TESTING
-# L = LFSR(fpoly=fpoly, initstate=state, verbose=False)
-#     tempseq = L.runKCycle(len(msg_2))
-#     key = "".join([str(x) for x in tempseq])
+   

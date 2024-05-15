@@ -1,11 +1,6 @@
 # import LFSR
-import numpy as np
 from pylfsr import LFSR
-import string
 import Utils
-
-import random
-
 
 
 # GEOCACAHE
@@ -47,7 +42,6 @@ if __name__ == "__main__":
     poly = [1, 6, 7, 9, 10, 11, 13, 15, 16, 18, 20, 23, 27, 29, 30, 31, 42, 46, 48, 49, 50, 56, 58, 59, 60, 61]
     # The taps need to be highest to lowest, apparently, for the library.
     fpoly = poly[::-1]
-
 
 
     # #######################
